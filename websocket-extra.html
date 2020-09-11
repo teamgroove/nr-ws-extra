@@ -205,8 +205,8 @@
     <div class="form-row">
         <label for="node-input-mode"><i class="fa fa-dot-circle-o"></i> <span data-i18n="websocket.label.type"></span></label>
         <select id="node-input-mode">
-            <option value="server" data-i18n="websocket.listenon"></option>
-            <option value="client" data-i18n="websocket.connectto"></option>
+            <option value="server">LISTEN</option>
+            <option value="client">CONNECT</option>
         </select>
     </div>
     <div class="form-row" id="websocket-server-row">
@@ -262,7 +262,7 @@
     </div>
     <div class="form-row">
         <label for="node-config-input-protocol"><i class="fa fa-tag"></i> <span data-i18n="websocket.label.protocol"></span></label>
-        <input id="node-config-input-protocol" type="text" data-i18n="[placeholder]websocket.placeholder.protocol">
+        <input id="node-config-input-protocol" type="text" placeholder="protocol">
     </div>
     <div class="form-tips">
         <p><span data-i18n="[html]websocket.tip.url1"></span></p>
