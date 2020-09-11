@@ -1,8 +1,8 @@
 {
   "name": "nr-ws-extra",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
-  "main": "websockets-extra.js",
+  "main": "websocket-extra.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,7 @@
   "license": "ISC",
   "node-red": {
     "nodes": {
-      "ws-extra": "ws-extra.js"
+      "websocket-extra": "websocket-extra.js"
     }
   }
 }
