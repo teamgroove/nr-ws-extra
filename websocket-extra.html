@@ -203,6 +203,9 @@
 <!-- WebSocket out Node -->
 <script type="text/html" data-template-name="websocket out extra">
     <div class="form-row">
+        WEBSOCKET OUT
+    </div>
+    <div class="form-row">
         <label for="node-input-mode"><i class="fa fa-dot-circle-o"></i> <span data-i18n="websocket.label.type"></span></label>
         <select id="node-input-mode">
             <option value="server">LISTEN</option>
@@ -226,6 +229,9 @@
 <!-- WebSocket Server configuration node -->
 <script type="text/html" data-template-name="websocket-listener-extra">
     <div class="form-row">
+        SERVER CONFIG
+    </div>
+    <div class="form-row">
         <label for="node-config-input-path"><i class="fa fa-bookmark"></i> <span data-i18n="websocket.label.path"></span></label>
         <input id="node-config-input-path" type="text" placeholder="/ws/example">
     </div>
@@ -245,6 +251,9 @@
 <!-- WebSocket Client configuration node -->
 <script type="text/html" data-template-name="websocket-client-extra">
     <div class="form-row">
+        CLIENT CONFIG
+    </div>
+    <div class="form-row">
         <label for="node-config-input-path"><i class="fa fa-bookmark"></i> <span data-i18n="websocket.label.url"></span></label>
         <input id="node-config-input-path" type="text" placeholder="ws://example.com/ws">
     </div>
@@ -261,7 +270,7 @@
         </select>
     </div>
     <div class="form-row">
-        <label for="node-config-input-protocol"><i class="fa fa-tag"></i> <span data-i18n="websocket.label.protocol"></span></label>
+        <label for="node-config-input-protocol"><i class="fa fa-tag"></i> <span>PROTOCOL</span></label>
         <input id="node-config-input-protocol" type="text" placeholder="protocol">
     </div>
     <div class="form-tips">
