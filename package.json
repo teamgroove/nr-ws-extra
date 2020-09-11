@@ -1,16 +1,20 @@
 {
   "name": "nr-ws-extra",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "websockets-extra.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "https-proxy-agent": "^5.0.0",
+    "ws": "0.8.1"
   },
   "author": "",
   "license": "ISC",
   "node-red": {
     "nodes": {
-      "lower-case": "lower-case.js"
+      "ws-extra": "ws-extra.js"
     }
   }
 }
