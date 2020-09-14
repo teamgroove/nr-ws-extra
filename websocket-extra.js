@@ -43,7 +43,7 @@ module.exports = function (RED) {
         // Create a RED node
         RED.nodes.createNode(this, n);
         var node = this;
-
+        // console.log('///////////////////////////////websocketLISTENERnode');
         // Store local copies of the node configuration (as defined in the .html)
         node.path = n.path;
         node.wholemsg = (n.wholemsg === "true");
@@ -57,6 +57,7 @@ module.exports = function (RED) {
         node.tls = n.tls;
 
         function startconn() {    // Connect to remote endpoint
+            // console.log('///////////////////////////////STARTCONN');
             node.tout = null;
             var prox, noprox;
             if (process.env.http_proxy) { prox = process.env.http_proxy; }
@@ -87,10 +88,17 @@ module.exports = function (RED) {
                 }
             }
             if (node.protocol) {
-                options.protocol = node.protocol
+                options.followRedirects = true;
+                options.strictSSL = false;
+                options.rejectUnauthorized = false;
+                var socket = new ws(node.path, node.protocol, options);
+                // console.log('///////////////////////////////protocol:' + node.protocol);
+                // console.log('///////////////////////////////path:' + node.path);
+            } else {
+                var socket = new ws(node.path, options);
             }
 
-            var socket = new ws(node.path, options);
+
             socket.setMaxListeners(0);
             node.server = socket; // keep for closing
             handleConnection(socket);
