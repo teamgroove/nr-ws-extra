@@ -86,7 +86,11 @@ module.exports = function (RED) {
                     tlsNode.addTLSOptions(options);
                 }
             }
-            var socket = new ws(node.path, node.protocol, options);
+            if (node.protocol) {
+                options.protocol = node.protocol
+            }
+
+            var socket = new ws(node.path, options);
             socket.setMaxListeners(0);
             node.server = socket; // keep for closing
             handleConnection(socket);
